@@ -6,7 +6,7 @@
 
 generator client {
   provider = "prisma-client-js"
-  output   = "../generated/prisma"
+  // output   = "../generated/prisma"
 }
 
 datasource db {
@@ -111,4 +111,5 @@ model Message {
   name      String
   email     String
   content   String
+  createdAt DateTime @default(now())
 }
